@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Binding</title>
+    <link rel="icon" href="../img/Profile.jpg" type="image">
+    <style>
+      
+        .box{
+            position: fixed;
+            top: 59vh;
+            left: 40%;
+            width: 50vh;
+            height: 50vh;
+            background: linear-gradient(10deg,rgb(143, 143, 143) 15%,rgb(73, 73, 73) 53%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: yellow;
+            box-shadow: 0px 0px 20px black,
+                    inset 0px 0px 10px whitesmoke;
+            border-radius: 10px;
+            font-size: 100px;
+            font-family: arial;
+        }
+        span{
+            animation: animate 1s infinite;
+
+        }
+        @keyframes animate{
+            from{
+                text-decoration: underline;
+            }
+            to{
+                text-align: none;
+            }
+        }
+        h5{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <!-- Javascript Appear Here ! -->
+        <li>Item #1</li>
+        <li>Item #2</li>
+        <li>Item #3</li>
+    </ul>
+    <div class="box"><span>JS</span><h5>List Binding</h5></div>
+</body>
+<script src="./js/list.js"></script>
+<script type="text/javascript">
+    const myList = document.getElementById('myList');
+    const listBinding = new ListBinding(myList)
+</script>
+</html>
